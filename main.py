@@ -26,6 +26,9 @@ def check_word():
                     print(word + " ➕ ")
                 else:
                     print(" ❌ ")
+        if attempt == 0:
+            print(" Game Over !!! ")
 
 
 game_instruction()
+check_word()
