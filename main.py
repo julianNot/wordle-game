@@ -19,6 +19,13 @@ def check_word():
         else:
             attempt -= 1
             print(f"you have {attempt} attempt(s) ,, \n")
+            for char, word in zip(hidden_word, guess):
+                if word in hidden_word and word in char:
+                    print(word + " ✔ ")
+                elif word in hidden_word:
+                    print(word + " ➕ ")
+                else:
+                    print(" ❌ ")
 
 
 game_instruction()
