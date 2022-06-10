@@ -1,4 +1,9 @@
 
+from random import randint
+
+
+words = ['car', 'guitar', 'computer', 'train', 'python', 'django']
+
 def game_instruction():
     print( """Wordle is a single player game
         A player has to guess a five letter hidden word
@@ -8,8 +13,11 @@ def game_instruction():
         "➕" indicates that the letter at that position is in the hidden word, but in a different position
         "❌" indicates that the letter at that position is wrong, and isn't in the hidden word   """ )
 
+def get_word(number):
+    return words[number]
+
 def check_word():
-    hidden_word = "snail"
+    hidden_word = get_word( randint(0, len(words)) )
     attempt = 6
     while attempt > 0:
         guess = str(input('Guess the word: '))
